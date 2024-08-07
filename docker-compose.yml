@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  st-web:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - shared
+    environment:
+      - NODE_ENV=development
+
+networks:
+  shared:
+    external: true
+    name: dragonbound
